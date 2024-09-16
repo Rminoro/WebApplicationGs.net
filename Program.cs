@@ -1,11 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Datas;
+using WebApplication1.Singleton; // Importa o namespace correto
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Configurar o DbContext para usar o banco de dados Oracle via appsettings.json
 builder.Services.AddDbContext<UserContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Registrar SingletonUser como Singleton
+builder.Services.AddSingleton<SingletonUser>();
+
 // Adicionar os serviços de controladores e configurações do Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

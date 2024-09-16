@@ -1,15 +1,11 @@
 ﻿namespace WebApplication1.Singleton
 {
-    public class Singleton
+    public class SingletonUser
     {
-        private static readonly Lazy<Singleton> _instance =
-       new Lazy<Singleton>(() => new Singleton());
-
-        public static Singleton Instance => _instance.Value;
-
-        private Singleton()
+        // Construtor público para o DI instanciad a classe
+        public SingletonUser()
         {
-         
+            // Inicialização do Singleton
         }
 
         public string GetSetting(string key)
