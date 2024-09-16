@@ -3,6 +3,7 @@
 ## Integrantes do Grupo
 
 98974 - Ana Júlia Almeida Silva Neves
+</br>
 552410 - NICOLY OLIVEIRA SANTOS
 99988 - Rafael Minoro Itokazo
 551831 - Vitor da Silva Pereira
