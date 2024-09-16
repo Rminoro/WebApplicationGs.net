@@ -5,7 +5,9 @@
 98974 - Ana Júlia Almeida Silva Neves
 </br>
 552410 - NICOLY OLIVEIRA SANTOS
+</br>
 99988 - Rafael Minoro Itokazo
+</br>
 551831 - Vitor da Silva Pereira
 
 ## Arquitetura
