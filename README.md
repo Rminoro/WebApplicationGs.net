@@ -26,7 +26,9 @@ Isso ajuda a manter a consistência e a integridade dos dados de configuração.
 
 ## Instruções para rodar a API 
 1- Clonar o repositório
+</br>
 2- Rodar o comando dotnet restore para restaurar os pacotes NuGet
+</br>
 3- Credenciais do ORACLE (User RM99988 SENHA 160698)
 
 
