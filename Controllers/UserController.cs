@@ -5,6 +5,7 @@ using WebApplication1.Datas;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace WebApplication1.Controllers
 {
@@ -23,6 +24,7 @@ namespace WebApplication1.Controllers
 
         // GET: api/User
         [HttpGet]
+        [SwaggerOperation(Summary = "Puxa todos os usuarios", Description = "Puxa todos os usuarios.")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             var users = await _userContext.Users.ToListAsync();
@@ -31,6 +33,7 @@ namespace WebApplication1.Controllers
 
         // GET: api/User/{id}
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "Puxa informações do usuario por id", Description = "Puxa informações de um usuário específico do banco de dados utilizando seu ID.")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _userContext.Users.FindAsync(id);
@@ -40,6 +43,7 @@ namespace WebApplication1.Controllers
         }
 
         // POST: api/User
+        [SwaggerOperation(Summary = "Adiciona um novo usuario", Description = "Adiciona um usuario novo definindo id, nome, email e senha.")]
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
@@ -52,6 +56,7 @@ namespace WebApplication1.Controllers
         }
 
         // PUT: api/User/{id}
+        [SwaggerOperation(Summary = "Altera alguma informação pelo id", Description = "altera algum atributo de  um usuário específico do banco de dados utilizando seu ID.")]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
@@ -69,6 +74,7 @@ namespace WebApplication1.Controllers
 
         // DELETE: api/User/{id}
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Deletar usuário por ID", Description = "Exclui um usuário específico do banco de dados utilizando seu ID.")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = await _userContext.Users.FindAsync(id);
