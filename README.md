@@ -32,7 +32,11 @@ Isso ajuda a manter a consistência e a integridade dos dados de configuração.
 
 ## Endpoints CRUD
 GET /api/User: Retorna todos os usuários.
+</br>
 GET /api/User/{id}: Retorna um usuário específico pelo ID.
+</br>
 POST /api/User: Cria um novo usuário.
+</br>
 PUT /api/User/{id}: Atualiza um usuário existente.
+</br>
 DELETE /api/User/{id}: Deleta um usuário pelo ID.
